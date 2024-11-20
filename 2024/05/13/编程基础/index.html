@@ -1,0 +1,657 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};</script>
+  
+  
+  <title>
+    编程基础笔记 |
+    
+    欢迎来到沐小九的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/project/css/loader.css">
+
+  
+  
+    <meta name="description" content="编程基础自学过程中遇到的问题Problem1:homebrew安装gcc的问题我的具体步骤如下： 打开终端安装脚本：&#x2F;bin&#x2F;zsh -c “$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)”检测安装是否成功：输入brew help出现一下信息则表示安装成功 安装gcc输入brew">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编程基础笔记">
+<meta property="og:url" content="https://yolandamujiu.github.io/project/2024/05/13/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="欢迎来到沐小九的博客">
+<meta property="og:description" content="编程基础自学过程中遇到的问题Problem1:homebrew安装gcc的问题我的具体步骤如下： 打开终端安装脚本：&#x2F;bin&#x2F;zsh -c “$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)”检测安装是否成功：输入brew help出现一下信息则表示安装成功 安装gcc输入brew">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://p.ipic.vip/gs4ik4.png">
+<meta property="og:image" content="https://p.ipic.vip/qtzs4o.png">
+<meta property="og:image" content="https://p.ipic.vip/n99258.png">
+<meta property="og:image" content="https://p.ipic.vip/vg32xe.png">
+<meta property="og:image" content="https://p.ipic.vip/jsvvrr.png">
+<meta property="og:image" content="https://p.ipic.vip/jclam4.png">
+<meta property="og:image" content="https://p.ipic.vip/hoik51.png">
+<meta property="og:image" content="https://p.ipic.vip/qb7opw.png">
+<meta property="og:image" content="https://p.ipic.vip/zyyuvt.png">
+<meta property="og:image" content="https://p.ipic.vip/hgpu1y.png">
+<meta property="og:image" content="https://p.ipic.vip/zkcrh8.png">
+<meta property="og:image" content="https://p.ipic.vip/9law38.png">
+<meta property="og:image" content="https://p.ipic.vip/hkbsmp.png">
+<meta property="og:image" content="https://p.ipic.vip/e5xi20.png">
+<meta property="og:image" content="https://p.ipic.vip/spmajc.png">
+<meta property="og:image" content="https://p.ipic.vip/k34z65.png">
+<meta property="og:image" content="https://p.ipic.vip/pebxex.png">
+<meta property="og:image" content="https://p.ipic.vip/dw70fa.png">
+<meta property="og:image" content="https://p.ipic.vip/rk26ko.png">
+<meta property="og:image" content="https://p.ipic.vip/9uerzb.png">
+<meta property="og:image" content="https://p.ipic.vip/tbnkqh.png">
+<meta property="og:image" content="https://p.ipic.vip/co0be9.png">
+<meta property="article:published_time" content="2024-05-13T09:49:32.000Z">
+<meta property="article:modified_time" content="2024-11-20T12:21:14.979Z">
+<meta property="article:author" content="Yolanda">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/gs4ik4.png">
+  
+  
+    <link rel="alternate" href="/project/atom.xml" title="欢迎来到沐小九的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/project/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/project/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff5252" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+         M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="#ff5252" />
+        </svg>
+      </div>
+      <div class="loading-word">你拍了拍沐小九</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/">首页</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/archives">归档</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/about">关于</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/friend">友链</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/project/atom.xml" title="RSS 订阅" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/project/images/banner.webp" alt="编程基础笔记">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/project/" id="logo">
+            <h1 data-aos="slide-up">编程基础笔记</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main"><article id="post-编程基础" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <a href="/project/2024/05/13/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" class="article-date-link" data-aos="zoom-in">
+    <time datetime="2024-05-13T09:49:32.000Z" itemprop="datePublished">2024-05-13</time>
+    <time style="display: none;" id="post-update-time">2024-11-20</time>
+  </a>
+</div>
+
+      
+
+    </div>
+    <div class="hr-line"></div>
+    
+
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+      
+        <h1 id="编程基础"><a href="#编程基础" class="headerlink" title="编程基础"></a>编程基础</h1><h2 id="自学过程中遇到的问题"><a href="#自学过程中遇到的问题" class="headerlink" title="自学过程中遇到的问题"></a>自学过程中遇到的问题</h2><h3 id="Problem1-homebrew安装gcc的问题"><a href="#Problem1-homebrew安装gcc的问题" class="headerlink" title="Problem1:homebrew安装gcc的问题"></a>Problem1:homebrew安装gcc的问题</h3><p>我的具体步骤如下：</p>
+<h4 id="打开终端"><a href="#打开终端" class="headerlink" title="打开终端"></a>打开终端</h4><h4 id="安装脚本：-bin-zsh-c-“-curl-fsSL-https-gitee-com-cunkai-HomebrewCN-raw-master-Homebrew-sh-”"><a href="#安装脚本：-bin-zsh-c-“-curl-fsSL-https-gitee-com-cunkai-HomebrewCN-raw-master-Homebrew-sh-”" class="headerlink" title="安装脚本：&#x2F;bin&#x2F;zsh -c “$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)”"></a>安装脚本：&#x2F;bin&#x2F;<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=zsh&spm=1001.2101.3001.7020">zsh</a> -c “$(curl -fsSL <a target="_blank" rel="noopener" href="https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh">https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh</a>)”</h4><h4 id="检测安装是否成功：输入brew-help"><a href="#检测安装是否成功：输入brew-help" class="headerlink" title="检测安装是否成功：输入brew help"></a>检测安装是否成功：输入brew help</h4><p>出现一下信息则表示安装成功<img src="https://p.ipic.vip/gs4ik4.png"></p>
+<h1 id="安装gcc"><a href="#安装gcc" class="headerlink" title="安装gcc"></a>安装gcc</h1><h4 id="输入brew-install-gcc"><a href="#输入brew-install-gcc" class="headerlink" title="输入brew install gcc"></a>输入brew install gcc</h4><p><img src="https://p.ipic.vip/qtzs4o.png"></p>
+<h4 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h4><p><img src="https://p.ipic.vip/n99258.png"></p>
+<p>输入“<strong>vim ~&#x2F;.zprofile</strong>”回车后按下i键进入编辑模式，按如图所示的方式复制并修改以下的文本来更改系统的配置信息,</p>
+<p><img src="https://p.ipic.vip/vg32xe.png"></p>
+<p>键入<strong>source ~&#x2F;.zprofile</strong>更新环境,此时查看版本，按CSDN上的步骤，终端应该会显示如下<img src="https://p.ipic.vip/jsvvrr.png">然而我输入gcc –v之后，显示了</p>
+<p>zsh:command not found:gcc-X</p>
+<p>不太会修改环境变量，尝试重启终端失败，最后重启电脑之后，终端连brew都找不到了<img src="https://p.ipic.vip/jclam4.png"></p>
+<p>（谢谢zygg的帮助！）</p>
+<p>原因：配置出错</p>
+<p>解决方法：我们首先把bashprofile，zprofile，zshrc之类的修改过的全删掉，然后重新source。而且Mac里是自带clang的gcc的，因此大概率不用重装。</p>
+<h3 id="Problem2-VScode多模块编译出现的问题"><a href="#Problem2-VScode多模块编译出现的问题" class="headerlink" title="Problem2:VScode多模块编译出现的问题"></a>Problem2:VScode多模块编译出现的问题</h3><p><img src="https://p.ipic.vip/hoik51.png"></p>
+<p>原因：未进入.c文件所在的文件夹，而是在上一级目录</p>
+<p>解决方法：<code>cd test_05_03</code></p>
+<h3 id="Problem3"><a href="#Problem3" class="headerlink" title="Problem3:"></a>Problem3:</h3><p><img src="https://p.ipic.vip/qb7opw.png"></p>
+<p>解决方法：参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/xuan9862/article/details/126120880">https://blog.csdn.net/xuan9862/article/details/126120880</a></p>
+<p>在.vscode下的json文件中手动输入需要编译的所有.c文件</p>
+<p><img src="https://p.ipic.vip/zyyuvt.png"></p>
+<h3 id="Problem4"><a href="#Problem4" class="headerlink" title="Problem4:"></a>Problem4:</h3><p>文件夹下找不到.vscode文件</p>
+<p>解决方法：点击运行，start debugging即可</p>
+<p><img src="https://p.ipic.vip/hgpu1y.png"></p>
+<h2 id="VScode程序运行"><a href="#VScode程序运行" class="headerlink" title="VScode程序运行"></a>VScode程序运行</h2><p><img src="https://p.ipic.vip/zkcrh8.png"></p>
+<h2 id="Makefile学习笔记"><a href="#Makefile学习笔记" class="headerlink" title="Makefile学习笔记"></a>Makefile学习笔记</h2><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version 1</span></span><br><span class="line"><span class="section">hello:main.c print.c print1.c</span></span><br><span class="line">	gcc -o hello main.c print.c print1.c</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version 2</span></span><br><span class="line">CXX=gcc</span><br><span class="line">TARGET=hello</span><br><span class="line">OBJ=main.o print.o print1.o</span><br><span class="line"><span class="variable">$(TARGET)</span>:<span class="variable">$(OBJ)</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -o <span class="variable">$(TARGET)</span> <span class="variable">$(OBJ)</span></span><br><span class="line"><span class="section">main.o:main.c</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -c main.c</span><br><span class="line"><span class="section">print.o:print.c</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -c print.c</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line"><span class="section">print1.o:print1.c</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -c print1.c</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version 3</span></span><br><span class="line">CXX=gcc</span><br><span class="line">TARGET=hello</span><br><span class="line">OBJ=main.o print.o print1.o</span><br><span class="line">CXXFLAGS=-c -Wall //warning all</span><br><span class="line"><span class="variable">$(TARGET)</span>:<span class="variable">$(OBJ)</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="section">%.o:%.c</span></span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>:clean //防止有个文件叫clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f *.o <span class="variable">$(TARGET)</span> //-f是强制删除</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version 4</span></span><br><span class="line">CXX=gcc</span><br><span class="line">TARGET=hello</span><br><span class="line">SRC=<span class="variable">$(<span class="built_in">wildcard</span> *.c)</span> //  扩展通配符</span><br><span class="line">OBJ=<span class="variable">$(<span class="built_in">patsubst</span> %.c,%.o,<span class="variable">$(SRC)</span>)</span> // 替换通配符,patsubst把<span class="variable">$(SRC)</span>中的变量符合后缀是.c的全部替换成.o</span><br><span class="line">CXXFLAGS=-c -Wall //warning all</span><br><span class="line"><span class="variable">$(TARGET)</span>:<span class="variable">$(OBJ)</span></span><br><span class="line">	<span class="variable">$(CXX)</span> -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="section">%.o:%.c</span></span><br><span class="line">	<span class="variable">$(CXX)</span> <span class="variable">$(CXXFLAGS)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"><span class="meta"><span class="keyword">.PHONY</span>:clean //防止有个文件叫clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -f *.o <span class="variable">$(TARGET)</span> //-f是强制删除</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p.ipic.vip/9law38.png"></p>
+<h2 id="CMake学习笔记"><a href="#CMake学习笔记" class="headerlink" title="CMake学习笔记"></a>CMake学习笔记</h2><h5 id="路径的一些小知识："><a href="#路径的一些小知识：" class="headerlink" title="路径的一些小知识："></a>路径的一些小知识：</h5><p>. 表示当前目录<br>.. 表示当前目录的上一级目录。<br>.&#x2F;表示当前目录下的某个文件或文件夹，视后面跟着的名字而定<br>..&#x2F;表示当前目录上一级目录的文件或文件夹，视后面跟着的名字而定。</p>
+<h5 id="CMake安装"><a href="#CMake安装" class="headerlink" title="CMake安装"></a>CMake安装</h5><p>官网下载，启动程序后从菜单栏中选择【Tools】，然后从下拉菜单中选择“How to Install For Command Line Use”，我建议使用第二种，若使用第一种重新打开命令行时系统仍无法识别CMake命令</p>
+<p>第一种：</p>
+<p><img src="https://p.ipic.vip/hkbsmp.png"></p>
+<p>第二种：</p>
+<p><img src="https://p.ipic.vip/e5xi20.png"></p>
+<h5 id="CMake基本语法"><a href="#CMake基本语法" class="headerlink" title="CMake基本语法"></a>CMake基本语法</h5><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version1</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"><span class="keyword">project</span>(hello)</span><br><span class="line">add_executive(hello main.c print.c print1.c)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version2</span></span><br><span class="line"><span class="keyword">PROJECT</span>(MAIN)</span><br><span class="line"><span class="keyword">SET</span>(SRC_LIST main.c print.c print1.c)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">&quot;This is BINARY dir&quot;</span> <span class="variable">$&#123;MAIN_BINART_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">&quot;This is SOURCE dir&quot;</span> <span class="variable">$&#123;MAIN_SOURCE_DIR&#125;</span>)</span><br><span class="line"><span class="keyword">add_executable</span>(main <span class="variable">$&#123;SRC_LIST&#125;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## Version3</span></span><br><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">2.8</span>)</span><br><span class="line"><span class="keyword">project</span>(main)</span><br><span class="line"><span class="keyword">set</span>(EXECUTABLE_OUTPUT_PATH <span class="variable">$&#123;PROJECT_SOURCE_DIR&#125;</span>/bin)</span><br><span class="line"><span class="keyword">aux_source_directory</span> (src SRC_LIST)</span><br><span class="line"><span class="keyword">include_directories</span> (inc)</span><br><span class="line"><span class="keyword">add_executable</span> (main <span class="variable">$&#123;SRC_LIST&#125;</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="cmake命令行使用"><a href="#cmake命令行使用" class="headerlink" title="cmake命令行使用"></a>cmake命令行使用</h5><p><img src="https://p.ipic.vip/spmajc.png"></p>
+<p><img src="https://p.ipic.vip/k34z65.png" alt=" "></p>
+<p><img src="https://p.ipic.vip/pebxex.png"></p>
+<h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>用homebrew安装简直不要太香（</p>
+<h5 id="案例代码上传至github"><a href="#案例代码上传至github" class="headerlink" title="案例代码上传至github:"></a>案例代码上传至github:</h5><p><img src="https://p.ipic.vip/dw70fa.png"></p>
+<p><img src="https://p.ipic.vip/rk26ko.png" alt="&quot;&quot;"></p>
+<p><img src="https://p.ipic.vip/9uerzb.png" alt="p"></p>
+<p><img src="https://p.ipic.vip/tbnkqh.png"></p>
+<p><img src="https://p.ipic.vip/co0be9.png"></p>
+<p>(Gitlab登不上去？)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+      
+      
+      
+      
+      
+
+    </footer>
+  </div>
+  
+  <nav id="article-nav" data-aos="fade-up">
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
+          <img data-src="https://mujiu-1325474485.cos.ap-shanghai.myqcloud.com/img/_DSC4241.jpg" data-sizes="auto" alt="一座华丽的怪物，而我只感到恐惧" class="lazyload">
+        
+        <a href="/project/2024/07/18/%E9%A6%99%E6%B8%AF%E6%B8%B8%E8%AE%B0/"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+          
+            一座华丽的怪物，而我只感到恐惧
+          
+        </h3>
+      </div>
+    
+    
+  </nav>
+
+
+</article>
+
+
+
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrapper wrap-sticky">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">编程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AD%A6%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">自学过程中遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem1-homebrew%E5%AE%89%E8%A3%85gcc%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">Problem1:homebrew安装gcc的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">打开终端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%9A-bin-zsh-c-%E2%80%9C-curl-fsSL-https-gitee-com-cunkai-HomebrewCN-raw-master-Homebrew-sh-%E2%80%9D"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">安装脚本：&#x2F;bin&#x2F;zsh -c “$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%EF%BC%9A%E8%BE%93%E5%85%A5brew-help"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">检测安装是否成功：输入brew help</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85gcc"><span class="toc-number">2.</span> <span class="toc-text">安装gcc</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5brew-install-gcc"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">输入brew install gcc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">修改配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem2-VScode%E5%A4%9A%E6%A8%A1%E5%9D%97%E7%BC%96%E8%AF%91%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.0.1.</span> <span class="toc-text">Problem2:VScode多模块编译出现的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem3"><span class="toc-number">2.0.2.</span> <span class="toc-text">Problem3:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem4"><span class="toc-number">2.0.3.</span> <span class="toc-text">Problem4:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VScode%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">VScode程序运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Makefile%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">2.2.</span> <span class="toc-text">Makefile学习笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">2.3.</span> <span class="toc-text">CMake学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-number">2.3.0.0.1.</span> <span class="toc-text">路径的一些小知识：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CMake%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.0.0.2.</span> <span class="toc-text">CMake安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CMake%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.3.0.0.3.</span> <span class="toc-text">CMake基本语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#cmake%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">2.3.0.0.4.</span> <span class="toc-text">cmake命令行使用</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-number">2.4.</span> <span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E8%87%B3github"><span class="toc-number">2.4.0.0.1.</span> <span class="toc-text">案例代码上传至github:</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/project/avatar/avatar.webp" data-sizes="auto" alt="Yolanda" class="lazyload">
+  <div class="sidebar-author-name">Yolanda</div>
+  <div class="sidebar-description">沐九</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+      
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep"></span>
+      Yolanda
+    </div>
+    
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        12.9k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:42
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/project/images/taichi.png" height="50" width="50" alt="backtop" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-toc-sidebar"><div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class" >
+      
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80"><span class="toc-number">1.</span> <span class="toc-text">编程基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AD%A6%E8%BF%87%E7%A8%8B%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">自学过程中遇到的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem1-homebrew%E5%AE%89%E8%A3%85gcc%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.1.</span> <span class="toc-text">Problem1:homebrew安装gcc的问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%BC%80%E7%BB%88%E7%AB%AF"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">打开终端</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC%EF%BC%9A-bin-zsh-c-%E2%80%9C-curl-fsSL-https-gitee-com-cunkai-HomebrewCN-raw-master-Homebrew-sh-%E2%80%9D"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">安装脚本：&#x2F;bin&#x2F;zsh -c “$(curl -fsSL https:&#x2F;&#x2F;gitee.com&#x2F;cunkai&#x2F;HomebrewCN&#x2F;raw&#x2F;master&#x2F;Homebrew.sh)”</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E5%AE%89%E8%A3%85%E6%98%AF%E5%90%A6%E6%88%90%E5%8A%9F%EF%BC%9A%E8%BE%93%E5%85%A5brew-help"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">检测安装是否成功：输入brew help</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85gcc"><span class="toc-number">2.</span> <span class="toc-text">安装gcc</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5brew-install-gcc"><span class="toc-number">2.0.0.1.</span> <span class="toc-text">输入brew install gcc</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%85%8D%E7%BD%AE"><span class="toc-number">2.0.0.2.</span> <span class="toc-text">修改配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem2-VScode%E5%A4%9A%E6%A8%A1%E5%9D%97%E7%BC%96%E8%AF%91%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.0.1.</span> <span class="toc-text">Problem2:VScode多模块编译出现的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem3"><span class="toc-number">2.0.2.</span> <span class="toc-text">Problem3:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem4"><span class="toc-number">2.0.3.</span> <span class="toc-text">Problem4:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VScode%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">VScode程序运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Makefile%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">2.2.</span> <span class="toc-text">Makefile学习笔记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0"><span class="toc-number">2.3.</span> <span class="toc-text">CMake学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B7%AF%E5%BE%84%E7%9A%84%E4%B8%80%E4%BA%9B%E5%B0%8F%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-number">2.3.0.0.1.</span> <span class="toc-text">路径的一些小知识：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CMake%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.0.0.2.</span> <span class="toc-text">CMake安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CMake%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">2.3.0.0.3.</span> <span class="toc-text">CMake基本语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#cmake%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8"><span class="toc-number">2.3.0.0.4.</span> <span class="toc-text">cmake命令行使用</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git"><span class="toc-number">2.4.</span> <span class="toc-text">Git</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%A1%88%E4%BE%8B%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A0%E8%87%B3github"><span class="toc-number">2.4.0.0.1.</span> <span class="toc-text">案例代码上传至github:</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+      
+  </div>
+</div>
+</div>
+      <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/project/avatar/avatar.webp" data-sizes="auto" alt="Yolanda" class="lazyload">
+  <div class="sidebar-author-name">Yolanda</div>
+  <div class="sidebar-description">沐九</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+</div>
+    
+  </div>
+  
+    <div class="sidebar-btn-wrapper">
+      <div class="sidebar-toc-btn current"></div>
+      <div class="sidebar-common-btn"></div>
+    </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/project/js/script.js"></script>
+
+
+
+  
+<script src="/project/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/project/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+        
+<script src="/project/js/insert_highlight.js" data-pjax></script>
+
+      
+    
+    
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        
+        const pswp = () => {
+          if (_$$('.article-entry a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-entry',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          if(_$$('.article-gallery a.article-gallery-item').length > 0) {
+            new PhotoSwipeLightbox({
+              gallery: '.article-gallery',
+              children: 'a.article-gallery-item',
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+      
+
+
+
+
+
+
+
+
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.3.4' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+  </body>
+  </html>
+

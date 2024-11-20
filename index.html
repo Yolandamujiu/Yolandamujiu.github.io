@@ -1,0 +1,598 @@
+
+  <!DOCTYPE html>
+  <html lang="zh-CN"  >
+  <head>
+  <meta charset="utf-8">
+  
+
+  
+
+  
+
+  
+  <script>window.icon_font = '4552607_tq6stt6tcg';window.clipboard_tips = {"success":"复制成功(*^▽^*)","fail":"复制失败 (ﾟ⊿ﾟ)ﾂ","copyright":{"enable":false,"count":50,"content":"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！"}};</script>
+  
+  
+  <title>
+    
+    欢迎来到沐小九的博客
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+  
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  
+    
+<link rel="stylesheet" href="/project/css/loader.css">
+
+  
+  
+    <meta name="description" content="沐九">
+<meta property="og:type" content="website">
+<meta property="og:title" content="欢迎来到沐小九的博客">
+<meta property="og:url" content="https://yolandamujiu.github.io/project/index.html">
+<meta property="og:site_name" content="欢迎来到沐小九的博客">
+<meta property="og:description" content="沐九">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yolandamujiu.github.io/images/banner.webp">
+<meta property="article:author" content="Yolanda">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://yolandamujiu.github.io/images/banner.webp">
+  
+  
+    <link rel="alternate" href="/project/atom.xml" title="欢迎来到沐小九的博客" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/project/images/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/project/css/style.css">
+
+  <link rel="preload" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  
+  
+  
+  
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+  
+  
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.0/dist/aos.css">
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+  <body>
+    
+  <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi">
+        <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+          <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff5252" />
+          <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+         M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="#ff5252" />
+        </svg>
+      </div>
+      <div class="loading-word">你拍了拍沐小九</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var startLoading = () => {
+      time = Date.now();
+      document.getElementById('loader').classList.remove("loading");
+    }
+    var endLoading = () => {
+      if (!time) {
+        document.body.style.overflow = 'auto';
+        document.getElementById('loader').classList.add("loading");
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          document.body.style.overflow = 'auto';
+          document.getElementById('loader').classList.add("loading");
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    document.getElementById('loader').addEventListener('click', endLoading);
+  </script>
+
+<div id="copy-tooltip" style="pointer-events: none; opacity: 0; transition: all 0.2s ease; position: fixed;top: 50%;left: 50%;z-index: 999;transform: translate(-50%, -50%);color: white;background: rgba(0, 0, 0, 0.5);padding: 10px 15px;border-radius: 10px;">
+</div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav">
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/">首页</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/archives">归档</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/about">关于</a>
+      </span>
+    
+      <span class="main-nav-link-wrap">
+        <div class="main-nav-icon icon-taichi"></div>
+        <a class="main-nav-link" href="/project/friend">友链</a>
+      </span>
+    
+    <a id="main-nav-toggle" class="nav-icon"></a>
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/project/atom.xml" title="RSS 订阅" target="_blank"></a>
+    
+    
+    
+  </nav>
+</div>
+<header id="header">
+  
+    
+      <img fetchpriority="high" src="/project/images/banner.webp" alt="">
+    
+  
+  <div id="header-outer">
+    <div id="header-title">
+      
+        
+        
+          <a href="/project/" id="logo">
+            <h1 data-aos="slide-up">欢迎来到沐小九的博客</h1>
+          </a>
+        
+      
+      
+        
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+          
+            <a href="/project/" id="subtitle">Yolanda_blog</a>
+          
+        </h2>
+      
+    </div>
+  </div>
+</header>
+
+        <div id="content">
+          
+          <section id="main">
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/project/2024/08/29/%E5%B7%9D%E8%A5%BF%E6%B8%B8%E8%AE%B0/" aria-label="山不见我，我自去见山"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        <img data-src="https://mujiu-1325474485.cos.ap-shanghai.myqcloud.com/img/IMG_9747-2.jpg" data-sizes="auto" alt="山不见我，我自去见山" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-29</span>
+        <span><span class="icon-pencil"></span>5.9k 字</span>
+        <span><span class="icon-clock"></span>19 分钟</span>
+      </div>
+      <h2 class="post-title">山不见我，我自去见山</h2>
+      <article class="post-article">
+        
+          “还是要来一次川西
+不然我怕我会后悔
+青春里竟没有机会
+为这样的雪山日落动心
+他们说318是此生必驾的一场冒险
+这份笃定背后的筹码
+要算贡嘎雪山一份吧
+在海拔4600米的木雅措上
+我们从日照金山的震撼瞬间
+等到云海翻涌的柔情时刻
+原来十九岁看到过的晚霞
+和八十岁不一样
+那是意气风发和迟暮慈祥的对撞
+而前者会把猎猎寒风
+冷冽空气当成是一种勋章
+山不向我走来
+我就向山走去
+匆匆光阴
+怎舍得
+悉数放在等待里”
+川西行程安排：
+D1：成都一天全一泸定D2：泸定—康定—折多山—新都桥一返回新都桥云观精品酒店（宿）D3：新都桥一塔公草原（可拍藏装）木雅大寺（小色达）一木格措一新都桥
+D4：新都桥—红海子—
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/project/2024/08/09/%E9%87%8D%E5%BA%86%E6%B8%B8%E8%AE%B0/" aria-label="重庆游记"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        <img data-src="https://mujiu-1325474485.cos.ap-shanghai.myqcloud.com/img/_DSC6751.jpg" data-sizes="auto" alt="重庆游记" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-08-09</span>
+        <span><span class="icon-pencil"></span>2.1k 字</span>
+        <span><span class="icon-clock"></span>7 分钟</span>
+      </div>
+      <h2 class="post-title">重庆游记</h2>
+      <article class="post-article">
+        
+          DAY 1下午到达重庆，机场T3航站楼出去可以拍到著名的黄色法拉利，然后下楼坐出租或地铁皆可。
+之后我们坐地铁至李子坝站拍摄轻轨穿楼，站台到一楼观景台之间间隔很多层，一路下楼会绕到大楼里的商场（很乱、旅游气息很浓），电梯爆满，下楼要走很久。
+去李子坝的最佳方案是地铁乘至牛角沱站，然后按小红书下图路线，可以拍到最佳视角，我们一路上还碰到了可爱的小猫。
+晚上我们去观音桥打卡了“我在重庆”的网红拍摄地，yysy不咋地，天桥上密密麻麻的美女和拉生意的摄影师。我们在天桥上碰到了一个迷之自信又有些可爱的摄影师，向我们炫耀自己三万的索尼和自己拍出的“神级照片”，我们用自己的富士和尼康拍了一些照片，他像看猴子
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-left" data-aos="fade-up">
+    
+      <a class="post-link" href="/project/2024/07/18/%E9%A6%99%E6%B8%AF%E6%B8%B8%E8%AE%B0/" aria-label="一座华丽的怪物，而我只感到恐惧"></a>
+    
+    
+    <div class="post-cover-left">
+      
+        <img data-src="https://mujiu-1325474485.cos.ap-shanghai.myqcloud.com/img/_DSC4241.jpg" data-sizes="auto" alt="一座华丽的怪物，而我只感到恐惧" class="lazyload">
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-07-18</span>
+        <span><span class="icon-pencil"></span>4.1k 字</span>
+        <span><span class="icon-clock"></span>13 分钟</span>
+      </div>
+      <h2 class="post-title">一座华丽的怪物，而我只感到恐惧</h2>
+      <article class="post-article">
+        
+          六天的香港之行已经结束，自从大学以来就已经没了写作的习惯，连阅读能力都在逐步退化。也因此搭建了自己的博客，希望将自己的所思所想及时地记录下来，迫使自己不变成一具没有思想和灵魂的空壳，这一场记录之旅就从香港之行开始吧。郁达夫说所谓旅游,就是从自己呆腻的地方去看别人呆腻的地方，如果说杭州我待了十九年也算是待腻了，那香港是一个我待了三天就待腻了的地方。DAY 1十一点，我拖着一个行李箱，背着书包、相机包和一个三脚架离开机场，坐着大巴一路上穿梭在香港的大街小巷，我对这座新鲜城市的好奇达到顶峰。一路上五颜六色的房屋又细又长、直直地插进天空里，像一条条硬掉了的彩虹糖，如果非要让我看每一座房屋的屋顶，那和让
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+    <div class="post-wrapper">
+  <div class="post-wrap-right" data-aos="fade-up">
+    
+      <a class="post-link" href="/project/2024/05/13/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" aria-label="编程基础笔记"></a>
+    
+    
+    <div class="post-cover-right">
+      
+        
+        
+          <img data-src="/project/images/banner.webp" data-sizes="auto" alt="编程基础笔记" class="lazyload">
+        
+      
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2024-05-13</span>
+        <span><span class="icon-pencil"></span>832 字</span>
+        <span><span class="icon-clock"></span>3 分钟</span>
+      </div>
+      <h2 class="post-title">编程基础笔记</h2>
+      <article class="post-article">
+        
+          编程基础自学过程中遇到的问题Problem1:homebrew安装gcc的问题我的具体步骤如下：
+打开终端安装脚本：&amp;#x2F;bin&amp;#x2F;zsh -c “$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)”检测安装是否成功：输入brew help出现一下信息则表示安装成功
+安装gcc输入brew install gcc
+修改配置
+输入“vim ~&amp;#x2F;.zprofile”回车后按下i键进入编辑模式，按如图所示的方式复制并修改以下的文本来更改系统的配置信息,
+
+键入source ~&amp;#x2
+        
+      </article>
+    </div>
+  </div>
+</div>
+  
+
+
+
+</section>
+          
+            <aside id="sidebar">
+  <div class="sidebar-wrapper ">
+    <div class="sidebar-wrap" data-aos="fade-up">
+      
+        <div class="sidebar-author">
+  <img data-src="/project/avatar/avatar.webp" data-sizes="auto" alt="Yolanda" class="lazyload">
+  <div class="sidebar-author-name">Yolanda</div>
+  <div class="sidebar-description">沐九</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+
+      
+      
+    </div>
+  </div>
+
+  
+</aside>
+
+          
+        </div>
+        <footer id="footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    
+    <div>
+      <span class="icon-copyright"></span>
+      2020-2024
+      <span class="footer-info-sep"></span>
+      Yolanda
+    </div>
+    
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener external nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener external nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+    
+    
+      <div>
+        <span class="icon-brush"></span>
+        12.9k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        00:42
+      </div>
+    
+    
+    
+    
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+    
+  </div>
+</footer>
+
+        <div class="sidebar-top">
+          <img src="/project/images/taichi.png" height="50" width="50" alt="backtop" />
+          <div class="arrow-up"></div>
+        </div>
+        <div id="mask"></div>
+      </div>
+      <nav id="mobile-nav">
+  <div class="sidebar-wrap">
+    
+      <div class="sidebar-author">
+  <img data-src="/project/avatar/avatar.webp" data-sizes="auto" alt="Yolanda" class="lazyload">
+  <div class="sidebar-author-name">Yolanda</div>
+  <div class="sidebar-description">沐九</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">4</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">0</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/" aria-label="首页"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/archives" aria-label="归档"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/about" aria-label="关于"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a class="sidebar-menu-link-dummy" href="/project/friend" aria-label="友链"></a>
+      <div class="sidebar-menu-icon icon-taichi"></div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+
+    
+  </div>
+  
+</nav>
+
+    </div>
+    
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+<script src="/project/js/script.js"></script>
+
+
+
+  
+<script src="/project/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+
+<script src="/project/js/pjax_script.js" data-pjax></script>
+
+
+
+
+
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.0.6/dist/index.umd.js" integrity="sha384-vkGvf25gm1C1PbcoD5dNfc137HzNL&#x2F;hr1RKA5HniJOaawtvUmH5lTVFgFAruE9Ge" crossorigin="anonymous"></script>
+
+  <script>
+    window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["#ff5252","#ff7c7c","#ffafaf","#ffd0d0"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["#ff0000"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'))
+  </script>
+
+
+
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+    
+    
+      
+    
+    
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '0.3.4' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+  </body>
+  </html>
+
